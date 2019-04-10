@@ -1,0 +1,19 @@
+query allWebsites {
+  allWebsites {
+    _id
+    name
+    description
+    url
+    ftp {
+      host
+      user
+      password
+      directory
+    }
+    enabledModules
+    fields {
+      name
+      value
+    }
+  }
+}

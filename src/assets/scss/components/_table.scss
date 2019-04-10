@@ -1,0 +1,52 @@
+$borderColor: transparentize($table__color, 0.75);
+
+table {
+  width: 100%;
+  background-color: $table__bgColor;
+  border-collapse: collapse;
+
+  @include borderShadow($borderColor);
+}
+
+table th {
+  padding: 0.5rem;
+  color: $table__head_color;
+  background-color: $table__head_bgColor;
+  vertical-align: bottom;
+}
+
+table tbody tr {
+  padding: 0.5rem 0;
+  transition: 0.2s ease background-color;
+
+  &:nth-child(even) {
+    background-color: $table__even_bgColor;
+  }
+
+  &:hover {
+    background-color: $table__hover_bgColor;
+  }
+}
+
+table td {
+  border-top: 1px solid $borderColor;
+  border-bottom: 1px solid $borderColor;
+  padding: 0.5rem 0.1rem;
+
+  &:not([align]) {
+    text-align: center;
+  }
+}
+
+.table__actions a {
+  text-decoration: none;
+  padding: 0 0.4rem;
+}
+
+table .table__cell--green {
+  background-color: $table__cell_bgGreen;
+}
+
+table .table__cell--red {
+  background-color: $table__cell_bgRed;
+}

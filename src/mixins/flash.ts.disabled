@@ -1,0 +1,27 @@
+import { Vue, Component } from 'nuxt-property-decorator'
+
+@Component({})
+export default class FlashMixin extends Vue {
+  public mounted (): void {
+    this.$store.state.flash.flash.forEach((flash) => {
+      let message = flash.message
+      if (message.startsWith('$t:')) {
+        message = this.$t(message.replace('$t:', ''))
+      }
+
+      const onComplete = flash.onComplete
+      this.$toast.show(
+        message,
+        Object.assign({}, flash, {
+          onComplete: () => {
+            this.$store.dispatch('flash/remove', flash)
+
+            if (typeof onComplete === 'function') {
+              onComplete()
+            }
+          }
+        })
+      )
+    })
+  }
+}

@@ -1,0 +1,16 @@
+.website__templates {
+  display: flex;
+  justify-content: space-around;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.website__template {
+  cursor: pointer;
+  width: $mobile_s;
+}
+
+.website__template--active {
+  border-color: $website__template__color;
+}

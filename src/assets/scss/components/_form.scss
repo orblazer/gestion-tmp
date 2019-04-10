@@ -1,0 +1,116 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form--margin-between {
+  margin: 20px 0;
+}
+
+.form__inline-field {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.textfield {
+  margin-bottom: 10px;
+}
+
+.form__inline-field .textfield {
+  width: 48%;
+}
+
+.textfield__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $textfield__border-hover;
+    transform: scale(0);
+    transition: transform 0.2s;
+    z-index: 2;
+  }
+}
+
+.textfield--checkbox {
+  & > .textfield__content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .textfield__label {
+    color: $black;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.textfield__input {
+  background: $textfield__background;
+  border: 1px solid $textfield__border;
+  border-bottom: 2px solid $textfield__border-bottom;
+  outline: none;
+  padding: 5px;
+  font-family:
+    "Roboto",
+    system-ui,
+    sans-serif;
+  font-size: 0.95rem;
+}
+
+textarea.textfield__input {
+  resize: vertical;
+}
+
+.textfield__error {
+  color: $textfield__border-error;
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.textfield__content:not(.textfield__content--noBorder):hover::after,
+.textfield--focused > .textfield__content:not(.textfield__content--noBorder)::after {
+  transform: scale(1);
+}
+
+.textfield--error > .textfield__content:not(.textfield__content--noBorder)::after {
+  transform: scale(1);
+  background-color: $textfield__border-error;
+}
+
+.form__submit {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.form__submit--right {
+  justify-content: flex-end;
+}
+
+.form__submit > input[type="submit"] {
+  cursor: pointer;
+}
+
+@media screen and (max-width: $tablet) {
+  .form__inline-field {
+    flex-direction: column;
+  }
+
+  .form__inline-field .textfield {
+    width: auto;
+  }
+
+  .form__submit > input[type="submit"] {
+    margin: 0 auto;
+  }
+}

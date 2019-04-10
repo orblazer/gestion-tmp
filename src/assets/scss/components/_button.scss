@@ -1,0 +1,54 @@
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.85rem;
+  margin: 0;
+  border: 0;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  background: none;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.btn.btn--block {
+  display: block;
+}
+
+.btn:disabled {
+  cursor: not-allowed !important;
+}
+
+.btn.btn--inline {
+  display: inline;
+  padding: 0;
+}
+
+.btn.btn--inline-block {
+  display: inline-block;
+}
+
+.btn.btn--primary {
+  background-color: $button__primary;
+  color: choose-contrast-color($button__primary);
+}
+
+.btn.btn--primary:disabled {
+  background-color: $button__primary-disabled;
+}
+
+.btn.btn--primary:not(:disabled):hover {
+  background-color: $button__primary-hover;
+  color: choose-contrast-color($button__primary-hover);
+}
+
+.btn.btn--bordered {
+  border: 2px solid $button__bordered;
+}
+
+.btn.btn--bordered:hover {
+  border-color: $button__bordered-hover;
+  color: inherit;
+}

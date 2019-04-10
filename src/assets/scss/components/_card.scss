@@ -1,0 +1,94 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  @include borderShadow($card__border);
+}
+
+.card--modal {
+  width: $mobile_s;
+}
+
+.card__header {
+  background-color: $card__header-bgColor;
+  color: $card__header-color;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.card__content {
+  background-color: $card__content-bgColor;
+  color: $card__content-color;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.card__thumbnail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  min-height: 120px;
+  background-color: $card__content-bgColor;
+
+  & > .material-icons {
+    font-size: 2rem;
+  }
+
+  & > img {
+    max-width: 100%;
+  }
+}
+
+.card__footer {
+  background-color: $card__footer-bgColor;
+  color: $card__footer-color;
+  padding: 0.5rem;
+  border-top: 1px solid $card__footer-border;
+}
+
+.card--modal .card__header,
+.card--modal .card__content,
+.card--modal .card__footer {
+  padding: 1rem;
+}
+
+.card__actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid $card__actions-border;
+  height: 48px;
+}
+
+.card__actions-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-decoration: none;
+  border: none;
+  color: $card__actions-color;
+  background-color: $card__actions-bgColor;
+
+  &:hover,
+  &:focus {
+    background-color: $card__actions-bgColor-hover;
+    color: $card__actions-color-hover;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid $card__actions-border;
+  }
+
+  & > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-decoration: none;
+    height: 100%;
+    color: inherit;
+  }
+}

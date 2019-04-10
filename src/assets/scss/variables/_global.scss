@@ -1,0 +1,47 @@
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+  "Helvetica Neue", sans-serif;
+$font-size: 1em;
+
+/**
+ * Devices size
+ */
+$laptop_l: 1440px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile_l: 425px;
+$mobile_m: 375px;
+$mobile_s: 320px;
+
+/**
+ * Global colors
+ */
+$white: #fafafa;
+$gray: #a0a0a0;
+$black: #0a0a0a;
+$blue: #3292f1;
+$red: #eb5c5b;
+$green: #67eb5b;
+
+/**
+ * Colors variants
+ */
+$black_2: lighten($black, 20);
+$black_3: lighten($black, 5);
+$white_2: darken($white, 20);
+$white_3: darken($white, 10);
+$blue_2: darken($blue, 12);
+$blue_3: #21374d;
+$green_2: #4abf4a;
+
+/**
+ * Specific colors
+ */
+$pre_bgColor: #dcdee2;
+$blockquote_border: #ddd;
+$website__template__color: $blue;
+
+/**
+ * Page head
+ */
+$pageHead__borderColor: $gray;
+$pageHead__background: #f4f6f8;

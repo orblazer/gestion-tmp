@@ -1,0 +1,53 @@
+$min-size: $mobile_s / 1.7;
+
+.grids {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.grids--center {
+  justify-content: center;
+}
+
+.grids--around {
+  justify-content: space-around;
+}
+
+.grids--v-center {
+  align-items: center;
+}
+
+.grids--v-top {
+  align-items: flex-start;
+}
+
+.grids--2 > * {
+  max-width: 48%;
+  width: 45%;
+  min-width: $min-size;
+  margin: 1vh 1vw;
+}
+
+.grids--3 > * {
+  width: 28%;
+  max-width: 30%;
+  min-width: $mobile_s;
+  margin: 1vh 1vw;
+}
+
+.grids--4 > * {
+  width: 20%;
+  max-width: 22%;
+  min-width: $min-size;
+  margin: 1vh 1vw;
+}
+
+@media all and (max-width: $min-size * 2.2) {
+  .grids--2 > *,
+  .grids--3 > *,
+  .grids--4 > * {
+    max-width: none;
+    width: 100%;
+  }
+}

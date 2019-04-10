@@ -1,0 +1,17 @@
+$card__border: $black_2;
+
+$card__header-bgColor: $blue_2;
+$card__header-color: choose-contrast-color($card__header-bgColor);
+
+$card__content-bgColor: $white;
+$card__content-color: choose-contrast-color($card__content-bgColor);
+
+$card__footer-bgColor: $white;
+$card__footer-color: choose-contrast-color($card__footer-bgColor);
+$card__footer-border: $gray;
+
+$card__actions-bgColor: $white;
+$card__actions-bgColor-hover: $white_3;
+$card__actions-color: choose-contrast-color($card__actions-bgColor);
+$card__actions-color-hover: choose-contrast-color($card__actions-bgColor-hover);
+$card__actions-border: $gray;

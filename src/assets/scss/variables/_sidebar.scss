@@ -1,0 +1,23 @@
+$sidebar__bgColor: #06567e;
+$sidebar__color: choose-contrast-color($sidebar__bgColor);
+$sidebar__separator_bgColor: $blue;
+$sidebar__hamburger_bgColor: $white;
+
+/**
+ * Tabs
+ */
+$sidebar__tab__border: #054464;
+$sidebar__tab__bgColor: #0681be;
+$sidebar__tab__color: choose-contrast-color($sidebar__tab__bgColor);
+$sidebar__tab-hover__bgColor: lighten($sidebar__tab__bgColor, 10);
+$sidebar__tab-hover__color: choose-contrast-color($sidebar__tab-hover__bgColor);
+$sidebar__tab-active__bgColor: $sidebar__bgColor;
+$sidebar__tab-active__color: $sidebar__color;
+
+/**
+ * Link
+ */
+$sidebar__link__color: $sidebar__color;
+$sidebar__link-active__bgColor: lighten($sidebar__bgColor, 5);
+$sidebar__link-active__color: choose-contrast-color($sidebar__link-active__bgColor);
+$sidebar__link-accordion__bgColor: darken($sidebar__bgColor, 5);

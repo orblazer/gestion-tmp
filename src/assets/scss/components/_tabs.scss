@@ -1,0 +1,37 @@
+.tabs__controls {
+  display: flex;
+  border-bottom: 1px solid $tabs__control_border;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs__control {
+  background-color: $tabs__control_bgColor;
+  border: 1px solid $tabs__control_border;
+  padding: 0.6rem 1rem;
+  margin-bottom: -1px;
+  cursor: pointer;
+  user-select: none;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.tabs__control:hover,
+.tabs__control:focus,
+.tabs__control--active {
+  background-color: $tabs__control_bgActive;
+  border-color: transparent;
+  color: choose-contrast-color($tabs__control_bgActive);
+}
+
+.tabs__content {
+  padding: 1rem;
+  background-color: $tabs__bgColor;
+  border-top: none !important;
+  margin-bottom: 1rem;
+
+  @include borderShadow($tabs__border);
+}

@@ -1,0 +1,8 @@
+$table__bgColor: white;
+$table__color: $black;
+$table__head_bgColor: $white_3;
+$table__head_color: choose-contrast-color($table__head_bgColor);
+$table__even_bgColor: $white;
+$table__hover_bgColor: transparentize($blue_2, 0.95);
+$table__cell_bgGreen: #97d497;
+$table__cell_bgRed: #e28e8d;

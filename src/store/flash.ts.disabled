@@ -1,0 +1,60 @@
+import { VuexModule, Module, Action, Mutation } from 'vuex-module-decorators'
+import { Flash as FlashType } from '@types'
+// import { login, logout } from '~/graphql/auth.gql'
+
+@Module({
+  name: 'flash',
+  namespaced: true,
+  stateFactory: true
+})
+export default class Flash extends VuexModule {
+  public flash: FlashType[] = []
+
+  @Mutation
+  private ADD_FLASH (payload: FlashType): void {
+    this.flash.push(payload)
+  }
+  private REMOVE_FLASH (index: number): void {
+    if (index === -1) {
+      return
+    }
+
+    this.flash.splice(index, 1)
+  }
+
+  @Action({ commit: 'REMOVE_FLASH' })
+  public remove (flash: FlashType): number {
+    const index = this.flash.indexOf(flash)
+    return index
+  }
+
+  @Action
+  public success (payload: FlashType): void {
+    payload.type = 'success'
+    this.show(payload)
+  }
+
+  @Action
+  public info (payload: FlashType): void {
+    payload.type = 'info'
+    this.show(payload)
+  }
+
+  @Action
+  public error (payload: FlashType): void {
+    payload.type = 'error'
+    this.show(payload)
+  }
+
+  private show (payload: FlashType): void {
+    if (process.browser) {
+      if (payload.message.startsWith('$t:')) {
+        // payload.message = this.app.$t(payload.message.replace('$t:', ''))
+      }
+
+      // this.app.$toast.show(payload.message, payload.options)
+    } else {
+      this.context.commit('ADD_FLASH', payload)
+    }
+  }
+}

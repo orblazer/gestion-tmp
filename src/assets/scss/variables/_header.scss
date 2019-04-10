@@ -1,0 +1,7 @@
+$header__bgColor: white;
+
+/**
+ * Link
+ */
+$header__link__bgColor-hover: $blue;
+$header__link__color-hover: choose-contrast-color($header__link__bgColor-hover);

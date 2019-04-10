@@ -1,0 +1,47 @@
+.text--bold {
+  font-weight: bold;
+}
+
+.text--light {
+  font-weight: 400;
+}
+
+.text--italic {
+  font-style: italic;
+}
+
+.text--capitalize {
+  text-transform: capitalize;
+}
+
+.text--upper {
+  text-transform: uppercase;
+}
+
+.text--blue {
+  color: $blue;
+}
+
+.text--red {
+  color: $red;
+}
+
+.text--green {
+  color: $green_2;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--justify {
+  text-align: justify;
+}
+
+.title {
+  border-bottom: 2px solid $blue;
+}

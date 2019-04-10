@@ -1,0 +1,49 @@
+@import "./reset";
+@import "./components/imports";
+@import "./fonts";
+
+html,
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+/**
+ * Code/Pre
+ */
+code {
+  $pre_color: choose-contrast-color($pre_bgColor);
+
+  color: $pre_color;
+  background-color: $pre_bgColor;
+  padding: 2px 5px;
+}
+
+pre {
+  $pre_color: choose-contrast-color($pre_bgColor);
+
+  @include borderShadow(transparentize($pre_color, 0.75));
+
+  display: block;
+  padding: 8px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: $pre_bgColor;
+  color: $pre_color;
+  overflow: auto;
+
+  code {
+    color: inherit;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+blockquote {
+  border: 1px solid $blockquote_border;
+  border-left: 4px solid $blockquote_border;
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0 1rem;
+}

@@ -1,0 +1,19 @@
+.content {
+  padding: 1rem;
+}
+
+.content--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content--error {
+  text-align: center;
+  background: $white;
+}
+
+.content--dark {
+  background-color: $white_3;
+}
